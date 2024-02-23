@@ -155,18 +155,11 @@ Lab Setup:
   :alt: Step18
 
 29.  DNS Servers:'8.8.8.8'
+30. Root password: 'set root password of your choice'
+31. Timezone: 'Asia/Singapore'
 
 .. image:: images/install_alpine_step21.png
   :alt: Step18
-
-30. Root password: 'set root password of your choice'
-    
-.. image:: images/install_alpine_step22.png
-  :alt: Step19
-31. Timezone: 'Asia/Singapore'
-   
-.. image:: images/install_alpine_step18.png
-  :alt: Step20
 
 32. HTTP/FTP Proxy:'none'
 33.  Mirror:'skip'

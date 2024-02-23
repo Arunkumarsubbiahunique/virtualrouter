@@ -1,5 +1,5 @@
-Network with Overlay Network for PCs with the Same IP Address
-=============================================================
+Routing Overlay Network for PCs with the Same IP Addresses - Overlay Router
+===========================================================================
 
 This document describes a network with a Overlay router and an overlay network that allows PCs with the same IP address to connect to the control PC. This is achieved through the use of namespaces and virtual ethernet adapters that patch one namespace to another.
 

@@ -142,6 +142,7 @@ Lab Setup:
 .. image:: images/install_alpine_step13.png
   :alt: Step16
 25. Keyboard Variant : 'us'
+
 .. image:: images/install_alpine_step14.png
   :alt: Step17
 27. Hostname: 'PC01' or 'PC02' or 'PC03' or 'vrouter'
@@ -154,6 +155,7 @@ Lab Setup:
   :alt: Step18
 
 29.  DNS Servers:'8.8.8.8'
+
 .. image:: images/install_alpine_step21.png
   :alt: Step18
 

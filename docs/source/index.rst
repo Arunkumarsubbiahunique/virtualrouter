@@ -256,6 +256,8 @@ code ...
 
 .. code-block:: bash
   :linenos:
+
+
     vi /etc/nettop/network-setup.sh
     hit 'i' key to edit the file
     copy and paste the below
@@ -281,11 +283,16 @@ code ...
 
     type 'ip route', hit enter and default gateway
 code ...
+
+
+
 4. On Vrouter
     -----------
     
 .. code-block:: bash
   :linenos:
+
+
     vi /etc/nettop/network-setup.sh
     hit 'i' key to edit the file
     copy and paste the below

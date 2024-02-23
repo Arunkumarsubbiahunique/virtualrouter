@@ -188,8 +188,8 @@ Download the scripts from : https://github.com/Arunkumarsubbiahunique/network-se
     On pc1
     ------
 .. code-block:: bash
+  :linenos:
 
-   code
     vi /etc/nettop/network-setup.sh
     hit 'i' key to edit the file
     copy and paste the below
@@ -214,12 +214,13 @@ Download the scripts from : https://github.com/Arunkumarsubbiahunique/network-se
     type 'ip a', hit enter and verify the ip address on eth0
 
     type 'ip route', hit enter and default gateway
+   code ...
 
     On pc2
     ------
     vi /etc/nettop/network-setup.sh
 .. code-block:: bash
-
+  :linenos:
    code
     hit 'i' key to edit the file
     copy and paste the below
@@ -245,12 +246,14 @@ Download the scripts from : https://github.com/Arunkumarsubbiahunique/network-se
 
     type 'ip route', hit enter and default gateway
 
+   code ...
+
     On pc3
     ------
     vi /etc/nettop/network-setup.sh
 .. code-block:: bash
+  :linenos:
 
-   code
     hit 'i' key to edit the file
     copy and paste the below
 
@@ -274,13 +277,13 @@ Download the scripts from : https://github.com/Arunkumarsubbiahunique/network-se
     type 'ip a', hit enter and verify the ip address on eth0
 
     type 'ip route', hit enter and default gateway
-
+   code ...
     On Vrouter
     -----------
     vi /etc/nettop/network-setup.sh
 .. code-block:: bash
+  :linenos:
 
-   code
     hit 'i' key to edit the file
     copy and paste the below
 
@@ -371,3 +374,4 @@ Download the scripts from : https://github.com/Arunkumarsubbiahunique/network-se
     type 'netns exec vr03 ip route', hit enter and verify the routes
 
     type 'netns exec vr03 ip tables -t nat -L -n', hit enter and verify the iptables
+   code ...

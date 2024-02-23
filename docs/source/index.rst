@@ -54,7 +54,7 @@ Lab Setup:
    https://www.wikihow.com/Install-VirtualBox#:~:text=1%20Open%20Terminal.%20%20...%20Terminal%20from%20the,minutes.%20When%20you%20see%20your%20computer...%20More%20   
 
 3. Download the alpine_linux_x86_64 virtual image 
-.. image:: images/alpin_image.png
+.. image:: images/alpine_image.png
   :alt: Alpine Image
 
 4. Setting Up PCs on virtualbox:

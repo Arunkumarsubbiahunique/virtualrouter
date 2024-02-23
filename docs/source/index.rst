@@ -221,10 +221,10 @@ code ...
 2. On pc2
     ------
 
-    vi /etc/nettop/network-setup.sh
 .. code-block:: bash
   :linenos:
-   code
+
+    vi /etc/nettop/network-setup.sh
     hit 'i' key to edit the file
     copy and paste the below
 
@@ -254,10 +254,9 @@ code ...
 3. On pc3
     ------
 
-    vi /etc/nettop/network-setup.sh
 .. code-block:: bash
   :linenos:
-
+    vi /etc/nettop/network-setup.sh
     hit 'i' key to edit the file
     copy and paste the below
 
@@ -284,10 +283,10 @@ code ...
 code ...
 4. On Vrouter
     -----------
-    vi /etc/nettop/network-setup.sh
+    
 .. code-block:: bash
   :linenos:
-
+    vi /etc/nettop/network-setup.sh
     hit 'i' key to edit the file
     copy and paste the below
 

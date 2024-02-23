@@ -33,4 +33,92 @@ NameSpaces and Virtual Ethernet Adapters
 ========================================
 Namespaces and virtual ethernet adapters are used to create the overlay network. Namespaces provide a way to isolate processes and resources on a Linux system. Virtual ethernet adapters provide a way to connect namespaces to each other.
 
-In the network described in this document, namespaces are used to create isolated network environments for the PCs that are connected to the overlay network. Virtual ethernet adapters are used to connect the namespaces to the VyOS router's eth2 interface.
+Lab Documentation: Virtual Router with Overlay Networks and DNAT
+================================================================
+This document describes a network lab setup with three PCs (PC1, PC2, PC3), a virtual router (alpinelinux), and virtual networks using namespaces and veth interfaces. 
+The lab demonstrates routing, connectivity, and DNAT functionalities.
+
+Hardware and Software:
+
+* VirtualBox
+* Alpine Linux x86_64 virtual images
+* Host-only network adapters
+* Bridge adpater
+
+Lab Setup:
+
+1. Download the virtual box for flavour of the operating system
+   https://www.virtualbox.org/wiki/Downloads
+
+2. Install the virtualbox in accordance to your operating system by following the installation guide
+   https://www.wikihow.com/Install-VirtualBox#:~:text=1%20Open%20Terminal.%20%20...%20Terminal%20from%20the,minutes.%20When%20you%20see%20your%20computer...%20More%20   
+
+3. Download the alpine_linux_x86_64 virtual image 
+.. image:: images/alpin_image.png
+  :alt: Alpine Image
+
+4. Setting Up PCs on virtualbox:
+   Install Alpine x86_64 on virtualbox as PC1, PC2, and PC3.
+   * clieck on the New button
+.. image:: images/install_alpine_step1.png
+  :alt: Step1 
+
+  * Enter the name for PC1, PC2, PC3 and Vrouter respectively for each time while repeating the steps
+  * Navigate the path the downloaded alpine image
+  * Choose Linux as its type, Linux 64-bit as its version
+.. image:: images/install_alpine_step2.png
+  :alt: Step2
+
+  * Click Next and leave it to default
+.. image:: images/install_alpine_step3.png
+  :alt: Step3
+
+  * Click Next and leave it to default
+.. image:: images/install_alpine_step4.png
+  :alt: Step4 
+  * Click on Finish button
+.. image:: images/install_alpine_step4.png
+  :alt: Step4 
+      * Note before starting the pc setup the network adapters accordingly by navigating to settings
+  * Click on setting button
+.. image:: images/install_alpine_step1.png
+  :alt: Step6
+  * Navigate to the network tab on side bar
+.. image:: images/install_alpine_step6.png
+  :alt: Step6
+  * Set the network adapter for PC's accordingly
+     * For PC1
+.. image:: images/install_alpine_step6.png
+  :alt: Step7
+     * For PC2
+.. image:: images/install_alpine_step8.png
+  :alt: Step8
+     * For PC1
+.. image:: images/install_alpine_step9.png
+  :alt: Step9
+     * For Vrouter - Set the 4 virtual adapters as follows:
+.. image:: images/install_alpine_step10.png
+  :alt: Step10
+.. image:: images/install_alpine_step6.png
+  :alt: Step11
+.. image:: images/install_alpine_step8.png
+  :alt: Step12
+.. image:: images/install_alpine_step9.png
+  :alt: Step13
+
+  * Start the PC's and Vrouter, by clicking the start button, this will open the terminal.
+.. image:: images/install_alpine_step11.png
+  :alt: Step14
+
+  * Login to alpine with default username 'root' and password as ''
+.. image:: images/install_alpine_step11.png
+  :alt: Step14
+
+  * Type 'setup-alpine' and enter the interactive setup
+.. image:: images/install_alpine_step12.png
+  :alt: Step15
+
+
+  
+
+1. Enable virtual ethernet adapters 2, 3, and 4 on each PC and set them as host-only adapters

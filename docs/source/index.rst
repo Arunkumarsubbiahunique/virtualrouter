@@ -1,22 +1,10 @@
-Welcome to Virtual ROuter documentation!
-===================================
+Welcome to Overlay Router documentation!
+========================================
 
-**Virtual Router** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**Overlay Router** is a networking device that forwards data packets between computer networks. A Overlay router is connected to three or more data lines from different IP networks. When a data packet comes in on one of the lines, the router reads the network address information in the packet header to determine the ultimate destination. Then, using information in its routing table or routing policy, it directs the packet to the next network on its journey.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+The Overlay Router allows the computers with same IP address to connect to the control PC this is achieved through using NameSpaces and Virtual ethernet adapters that patches one namespace to other.
 
-.. note::
+What Problem Does Overlay Router Resolves?
+==========================================
 
-   This project is under active development.
-
-Contents
---------
-
-.. toctree::
-
-   usage
-   api

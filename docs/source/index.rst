@@ -148,35 +148,49 @@ Lab Setup:
 25. Keyboard Variant : 'us'
 .. image:: images/install_alpine_step14.png
   :alt: Step17
-* Hostname: 'PC01' or 'PC02' or 'PC03' or 'vrouter'
+27. Hostname: 'PC01' or 'PC02' or 'PC03' or 'vrouter'
 
 .. image:: images/install_alpine_step16.png
   :alt: Step17
-* Network: 'none'
+28. Network: 'none'
+
 .. image:: images/install_alpine_step20.png
   :alt: Step18
-* DNS Servers:'8.8.8.8'
+
+29.  DNS Servers:'8.8.8.8'
 .. image:: images/install_alpine_step21.png
   :alt: Step18
-* Root password: 'set root password of your choice'
+
+30. Root password: 'set root password of your choice'
+    
 .. image:: images/install_alpine_step22.png
   :alt: Step19
-* Timezone: 'Asia/Singapore'
+31. Timezone: 'Asia/Singapore'
+   
 .. image:: images/install_alpine_step18.png
   :alt: Step20
-* HTTP/FTP Proxy:'none'
+
+32. HTTP/FTP Proxy:'none'
+    
 .. image:: images/install_alpine_step19.png
   :alt: Step21
-* * Mirror:'skip'
+
+33.  Mirror:'skip'
+    
 .. image:: images/install_alpine_step20.png
   :alt: Step22
-* Setup a user:'no'
+
+34. Setup a user:'no'
+    
 .. image:: images/install_alpine_step21.png
   :alt: Step23
-* SSH:'OpenSSH'
+
+35. SSH:'OpenSSH'
+    
 .. image:: images/install_alpine_step22.png
   :alt: Step24
-* Disk Mode:'sys'
+
+36. Disk Mode:'sys'
 .. image:: images/install_alpine_step23.png
   :alt: Step25
   

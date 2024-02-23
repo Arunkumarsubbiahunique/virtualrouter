@@ -8,5 +8,4 @@ The Overlay Router allows the computers with same IP address to connect to the c
 What Problem Does Overlay Router Resolves?
 ==========================================
 .. image:: images/network-topology.jpeg
-  :width: 400
   :alt: Alternative text

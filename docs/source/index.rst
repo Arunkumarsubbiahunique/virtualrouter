@@ -1,7 +1,8 @@
-Routing Overlay Network for PCs with the Same IP Addresses - Overlay Router
-===========================================================================
+Routing OverlMulti-tenant Network Router with Namespace-based IP Address Management
+===================================================================================
 
-This document describes a network with a Overlay router and an overlay network that allows PCs with the same IP address to connect to the control PC. This is achieved through the use of namespaces and virtual ethernet adapters that patch one namespace to another.
+This document describes a network with a Multitenant router and an multitenancy network that allows PCs with the same IP address 
+across the tenants to be contectes with the control PC. This is achieved through the use of namespaces and virtual ethernet adapters that patch one namespace to another.
 
 Network Diagram
 ===============
@@ -13,20 +14,20 @@ The network diagram is shown below:
 The network consists of the following devices:
 
 * PCs: These are the computers that connect to the network.
-* Overlay Router: This is a software router that runs on the Overlay router and creates the overlay network. 
+* Multitenant Router: This is a software router that runs on the mutlitenant router and creates the mutlitenancy capable network. 
   
 Network Configuration
 =====================
 The network is configured as follows:
 
 * The PCs are configured with IP addresses in the 192.168.1.0/24 subnet.
-* The Overlay router is configured with the following interfaces:
+* The Multitenant router is configured with the following interfaces:
    * eth0(192.168.2.35/22): This interface connects to the Management PC0 - 192.168.2.222/22.
-   * eth1(10.0.0.1/24): This interface connects to the Controller PC1 - 10.0.0.1/24.
+   * eth1(10.0.0.1/24): This interface connects to the Controller PC1 - 10.0.0.10/24.
    * eth2(192.168.1.1/24): This interface connects to a switch that connects to group 1 of PC's with IP address in 192.168.1.0/24 network space.
    * eth3(192.168.1.1/24): This interface connects to a switch that connects to group 2 of PC's with IP address in 192.168.1.0/24 network space.
 
-* The overlay router is configured with namespaces and vitual ethernet to connect the namespaces to create an overlay network on top of the Alpine router's physical network.
+* The Multitenant router is configured with namespaces and vitual ethernet to connect the namespaces to create an overlay network on top of the Alpine router's physical network.
 
 
 NameSpaces and Virtual Ethernet Adapters

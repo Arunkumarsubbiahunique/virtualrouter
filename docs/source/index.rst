@@ -99,11 +99,11 @@ Lab Setup:
      * For Vrouter - Set the 4 virtual adapters as follows:
 .. image:: images/install_alpine_step10.png
   :alt: Step10
-.. image:: images/install_alpine_step6.png
+.. image:: images/install_alpine_step25.png
   :alt: Step11
-.. image:: images/install_alpine_step8.png
+.. image:: images/install_alpine_step26.png
   :alt: Step12
-.. image:: images/install_alpine_step9.png
+.. image:: images/install_alpine_step27.png
   :alt: Step13
 
   * Start the PC's and Vrouter, by clicking the start button, this will open the terminal.
@@ -118,7 +118,33 @@ Lab Setup:
 .. image:: images/install_alpine_step12.png
   :alt: Step15
 
-
+   * The setup-alpine script offers the following configuration options:
+      * Keyboard Layout : 'us'
+.. image:: images/install_alpine_step13.png
+  :alt: Step16
+      * Keyboard Variant : 'us'
+.. image:: images/install_alpine_step14.png
+  :alt: Step17
+      * Hostname: 'PC01' or 'PC02' or 'PC03' or 'vrouter'
+.. image:: images/install_alpine_step14.png
+  :alt: Step17
+      * Network: 'none'
+.. image:: images/install_alpine_step15.png
+  :alt: Step18
+      * DNS Servers:'8.8.8.8'
+.. image:: images/install_alpine_step16.png
+  :alt: Step18
+      * Root password: 'set root password of your choice'
+.. image:: images/install_alpine_step17.png
+  :alt: Step19
+      * Timezone: 'Asia/Singapore'
+.. image:: images/install_alpine_step18.png
+  :alt: Step20
+      * HTTP/FTP Proxy (Proxy server to use for accessing the web/ftp. Use "none" for direct connections to websites and FTP servers.)
+      * Mirror (From where to download packages. Choose the organization you trust giving your usage patterns to.)
+      * Setup a user (Setting up a regular user account)
+      * SSH (Secure SHell remote access server. "OpenSSH" is part of the default install image. Use "none" to disable remote login, e.g. on laptops.)
+      * Disk Mode (Select between diskless (disk="none"), "data" or "sys", as described above.)
   
 
 1. Enable virtual ethernet adapters 2, 3, and 4 on each PC and set them as host-only adapters

@@ -108,7 +108,7 @@ Lab Setup:
 
 .. image:: images/install_alpine_step8.png
   :alt: Step8
-18. For PC1
+18. For PC3
 
 .. image:: images/install_alpine_step9.png
   :alt: Step9
@@ -293,7 +293,7 @@ code ...
 .. code-block:: bash
   :linenos:
 
-
+		apk add iproute2
     vi /etc/nettop/network-setup.sh
     hit 'i' key to edit the file
     copy and paste the below
@@ -387,3 +387,9 @@ code ...
     type 'netns exec vr03 ip tables -t nat -L -n', hit enter and verify the iptables
 
 code ...
+
+Adding additonal namespaces and duplicated Networks and DNAT
+============================================================
+
+
+

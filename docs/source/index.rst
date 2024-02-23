@@ -55,6 +55,7 @@ Lab Setup:
 
 3. Download the alpine_linux_x86_64 virtual image 
 
+
 .. image:: images/alpine_image.png
   :alt: Alpine Image
 

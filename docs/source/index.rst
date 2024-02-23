@@ -6,6 +6,7 @@ This document describes a network with a Overlay router and an overlay network t
 Network Diagram
 ===============
 The network diagram is shown below:
+
 .. image:: images/network-topology.jpeg
   :alt: Network Diagram
 The network consists of the following devices:

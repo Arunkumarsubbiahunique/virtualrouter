@@ -183,6 +183,8 @@ Lab Setup:
 41. On PC's and Vrouter
     mkdir -p /etc/nettop/network-setup.sh
 
+Download the scripts from : https://github.com/Arunkumarsubbiahunique/network-setup/tree/main
+
     On pc1
     ------
     vi /etc/nettop/network-setup.sh

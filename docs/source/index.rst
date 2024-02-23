@@ -131,10 +131,6 @@ Lab Setup:
   :alt: Step14
 
 21. Login to alpine with default username 'root' and password as ''
-
-.. image:: images/install_alpine_step11.png
-  :alt: Step14
-
 22. Type 'setup-alpine' and enter the interactive setup
 
 .. image:: images/install_alpine_step12.png

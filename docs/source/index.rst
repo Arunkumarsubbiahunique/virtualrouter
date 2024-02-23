@@ -171,25 +171,9 @@ Lab Setup:
   :alt: Step20
 
 32. HTTP/FTP Proxy:'none'
-    
-.. image:: images/install_alpine_step19.png
-  :alt: Step21
-
 33.  Mirror:'skip'
-    
-.. image:: images/install_alpine_step20.png
-  :alt: Step22
-
 34. Setup a user:'no'
-    
-.. image:: images/install_alpine_step21.png
-  :alt: Step23
-
 35. SSH:'OpenSSH'
-    
-.. image:: images/install_alpine_step22.png
-  :alt: Step24
-
 36. Disk Mode:'sys'
 .. image:: images/install_alpine_step23.png
   :alt: Step25

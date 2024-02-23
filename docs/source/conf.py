@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Virtual Router'
+copyright = '2024, Arunkumar Subbiah'
+author = 'Arunkumar Subbiah'
 
 release = '0.1'
 version = '0.1.0'

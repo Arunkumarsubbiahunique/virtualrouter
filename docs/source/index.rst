@@ -167,5 +167,193 @@ Lab Setup:
 35. SSH:'OpenSSH'
 36. Disk Mode:'sys'
 
+.. image:: images/install_alpine_step22.png
+  :alt: Step25
+
 .. image:: images/install_alpine_step23.png
   :alt: Step25
+
+37. After the 'alpine-setup' completed
+38. Type 'Poweroff' command and hit 'enter'
+
+39. After the 'PC's' and 'Vrouter' power offed, go to setting and navigate to storage and remove the bootable media from storage.
+
+40. Turn on the PC's and Vrouter
+
+41. On PC's and Vrouter
+    mkdir -p /etc/nettop/network-setup.sh
+
+    On pc1
+    ------
+    vi /etc/nettop/network-setup.sh
+    hit 'i' key to edit the file
+    copy and paste the below
+
+    ip addr add 10.0.0.10/24 dev eth0
+    ip route add default via 10.0.0.1 dev eth0
+
+    hit 'esc' key and type ':wq' to save
+
+    type 'crontab -e' and hit enter
+    scroll all the way down using 'down arror' and 
+    hit 'i' key to edit the file
+    copy and paste the below
+    @reboot sh /etc/nettop/network-setup.sh
+
+    hit 'esc' key and type ':wq' to save
+
+    type 'reboot' and hit enter
+
+    after the pc01 rebooted successfully
+
+    type 'ip a', hit enter and verify the ip address on eth0
+
+    type 'ip route', hit enter and default gateway
+
+    On pc2
+    ------
+    vi /etc/nettop/network-setup.sh
+    hit 'i' key to edit the file
+    copy and paste the below
+
+    ip addr add 192.168.1.100/24 dev eth0
+    ip route add default via 192.168.1.1 dev eth0
+
+    hit 'esc' key and type ':wq' to save
+
+    type 'crontab -e' and hit enter
+    scroll all the way down using 'down arror' and 
+    hit 'i' key to edit the file
+    copy and paste the below
+    @reboot sh /etc/nettop/network-setup.sh
+
+    hit 'esc' key and type ':wq' to save
+
+    type 'reboot' and hit enter
+
+    after the pc02 rebooted successfully
+
+    type 'ip a', hit enter and verify the ip address on eth0
+
+    type 'ip route', hit enter and default gateway
+
+    On pc3
+    ------
+    vi /etc/nettop/network-setup.sh
+    hit 'i' key to edit the file
+    copy and paste the below
+
+    ip addr add 192.168.1.100/24 dev eth0
+    ip route add default via 192.168.1.1 dev eth0
+
+    hit 'esc' key and type ':wq' to save
+
+    type 'crontab -e' and hit enter
+    scroll all the way down using 'down arror' and 
+    hit 'i' key to edit the file
+    copy and paste the below
+    @reboot sh /etc/nettop/network-setup.sh
+
+    hit 'esc' key and type ':wq' to save
+
+    type 'reboot' and hit enter
+
+    after the pc03 rebooted successfully
+
+    type 'ip a', hit enter and verify the ip address on eth0
+
+    type 'ip route', hit enter and default gateway
+
+    On Vrouter
+    -----------
+    vi /etc/nettop/network-setup.sh
+    hit 'i' key to edit the file
+    copy and paste the below
+
+    #!/bin/bash
+
+    # Create namespaces
+    ip netns add vr01
+    ip netns add vr02
+    ip netns add vr03
+
+    # Move interfaces to namespaces
+    ip link set eth1 netns vr01
+    ip link set eth2 netns vr02
+    ip link set eth3 netns vr03
+
+    # Configure IP addresses within namespaces
+    ip netns exec vr01 ip addr add 10.0.0.1/24 dev eth1
+    ip netns exec vr01 ip link set eth1 up
+
+    ip netns exec vr02 ip addr add 192.168.1.1/24 dev eth2
+    ip netns exec vr02 ip link set eth2 up
+
+    ip netns exec vr03 ip addr add 192.168.1.1/24 dev eth3
+    ip netns exec vr03 ip link set eth3 up
+
+    # Create and configure veth interfaces
+    ip link add vr01-vr02-veth0 type veth peer vr02-vr01-veth0
+    ip link set vr01-vr02-veth0 netns vr01
+    ip link set vr02-vr01-veth0 netns vr02
+
+    ip netns exec vr01 ip addr add 192.168.12.1/24 dev vr01-vr02-veth0
+    ip netns exec vr01 ip link set vr01-vr02-veth0 up
+
+    ip netns exec vr02 ip addr add 192.168.12.2/24 dev vr02-vr01-veth0
+    ip netns exec vr02 ip link set vr02-vr01-veth0 up
+
+    ip link add vr01-vr03-veth0 type veth peer vr03-vr01-veth0
+    ip link set vr01-vr03-veth0 netns vr01
+    ip link set vr03-vr01-veth0 netns vr03
+
+    ip netns exec vr01 ip addr add 192.168.13.1/24 dev vr01-vr03-veth0
+    ip netns exec vr01 ip link set vr01-vr03-veth0 up
+
+    ip netns exec vr03 ip addr add 192.168.13.3/24 dev vr03-vr01-veth0
+    ip netns exec vr03 ip link set vr03-vr01-veth0 up
+
+    # Configure routing
+    ip netns exec vr02 ip route add 10.0.0.0/24 via 192.168.12.1 dev vr02-vr01-veth0
+    ip netns exec vr03 ip route add 10.0.0.0/24 via 192.168.13.1 dev vr03-vr01-veth0
+
+    # Enable IP forwarding (optional, if needed)
+    ip netns exec vr01 sysctl -w net.ipv4.ip_forward=1
+    ip netns exec vr02 sysctl -w net.ipv4.ip_forward=1
+    ip netns exec vr03 sysctl -w net.ipv4.ip_forward=1
+
+    # NAT configuration
+    ip netns exec vr02 iptables -t nat -A PREROUTING -i vns02-veth1 -p icmp -j DNAT --to-destination 192.168.1.100
+    ip netns exec vr02 iptables -t nat -A PREROUTING -p tcp --dport 22 -j DNAT --to-destination 192.168.1.100:22
+    ip netns exec vr03 iptables -t nat -A PREROUTING -i vns03-veth1 -p icmp -j DNAT --to-destination 192.168.1.100
+    ip netns exec vr03 iptables -t nat -A PREROUTING -p tcp --dport 22 -j DNAT --to-destination 192.168.1.100:22
+
+    hit 'esc' key and type ':wq' to save
+
+    type 'crontab -e' and hit enter
+    scroll all the way down using 'down arror' and 
+    hit 'i' key to edit the file
+    copy and paste the below
+    @reboot sh /etc/nettop/network-setup.sh
+
+    hit 'esc' key and type ':wq' to save
+
+    type 'reboot' and hit enter
+
+    after the Vrouter rebooted successfully
+
+    type 'netns exec vr01 ip a', hit enter and verify the ip address on eth1
+
+    type 'netns exec vr01 ip route', hit enter and verify the routes
+
+    type 'netns exec vr02 ip a', hit enter and verify the ip address on eth2
+
+    type 'netns exec vr02 ip route', hit enter and verify the routes
+
+    type 'netns exec vr02 ip tables -t nat -L -n', hit enter and verify the iptables
+
+    type 'netns exec vr03 ip a', hit enter and verify the ip address on eth3
+
+    type 'netns exec vr03 ip route', hit enter and verify the routes
+
+    type 'netns exec vr03 ip tables -t nat -L -n', hit enter and verify the iptables

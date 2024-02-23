@@ -166,8 +166,6 @@ Lab Setup:
 34. Setup a user:'no'
 35. SSH:'OpenSSH'
 36. Disk Mode:'sys'
+
 .. image:: images/install_alpine_step23.png
   :alt: Step25
-  
-
-1. Enable virtual ethernet adapters 2, 3, and 4 on each PC and set them as host-only adapters

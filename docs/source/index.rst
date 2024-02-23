@@ -185,9 +185,8 @@ Lab Setup:
 
 Download the scripts from : https://github.com/Arunkumarsubbiahunique/network-setup/tree/main
 
-    On pc1
+1. On pc1
     ------
-
 
 .. code-block:: bash
   :linenos:
@@ -219,7 +218,7 @@ Download the scripts from : https://github.com/Arunkumarsubbiahunique/network-se
 
 code ...
 
-    On pc2
+2. On pc2
     ------
 
     vi /etc/nettop/network-setup.sh
@@ -252,7 +251,7 @@ code ...
 
 code ...
 
-    On pc3
+3. On pc3
     ------
 
     vi /etc/nettop/network-setup.sh
@@ -283,8 +282,7 @@ code ...
 
     type 'ip route', hit enter and default gateway
 code ...
-    
-    On Vrouter
+4. On Vrouter
     -----------
     vi /etc/nettop/network-setup.sh
 .. code-block:: bash

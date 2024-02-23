@@ -9,6 +9,7 @@ The network diagram is shown below:
 
 .. image:: images/network-topology.jpeg
   :alt: Network Diagram
+
 The network consists of the following devices:
 
 * PCs: These are the computers that connect to the network.

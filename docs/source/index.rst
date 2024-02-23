@@ -60,44 +60,45 @@ Lab Setup:
 
 4. Setting Up PCs on virtualbox:
    Install Alpine x86_64 on virtualbox as PC1, PC2, and PC3.
-   * clieck on the New button
+
+a. clieck on the New button
 .. image:: images/install_alpine_step1.png
   :alt: Step1 
 
-  * Enter the name for PC1, PC2, PC3 and Vrouter respectively for each time while repeating the steps
-  * Navigate the path the downloaded alpine image
-  * Choose Linux as its type, Linux 64-bit as its version
+b. Enter the name for PC1, PC2, PC3 and Vrouter respectively for each time while repeating the steps
+c. Navigate the path the downloaded alpine image
+d. Choose Linux as its type, Linux 64-bit as its version
 .. image:: images/install_alpine_step2.png
   :alt: Step2
 
-  * Click Next and leave it to default
+e. Click Next and leave it to default
 .. image:: images/install_alpine_step3.png
   :alt: Step3
 
-  * Click Next and leave it to default
+f. Click Next and leave it to default
 .. image:: images/install_alpine_step4.png
   :alt: Step4 
-  * Click on Finish button
+g. Click on Finish button
 .. image:: images/install_alpine_step4.png
   :alt: Step4 
-      * Note before starting the pc setup the network adapters accordingly by navigating to settings
-  * Click on setting button
+h. Note before starting the pc setup the network adapters accordingly by navigating to settings
+i. Click on setting button
 .. image:: images/install_alpine_step1.png
   :alt: Step6
-  * Navigate to the network tab on side bar
+j. Navigate to the network tab on side bar
 .. image:: images/install_alpine_step6.png
   :alt: Step6
-  * Set the network adapter for PC's accordingly
-     * For PC1
+k. Set the network adapter for PC's accordingly
+l. For PC1
 .. image:: images/install_alpine_step6.png
   :alt: Step7
-     * For PC2
+m. For PC2
 .. image:: images/install_alpine_step8.png
   :alt: Step8
-     * For PC1
+n. For PC1
 .. image:: images/install_alpine_step9.png
   :alt: Step9
-     * For Vrouter - Set the 4 virtual adapters as follows:
+o. For Vrouter - Set the 4 virtual adapters as follows:
 .. image:: images/install_alpine_step10.png
   :alt: Step10
 .. image:: images/install_alpine_step25.png
@@ -107,45 +108,55 @@ Lab Setup:
 .. image:: images/install_alpine_step27.png
   :alt: Step13
 
-  * Start the PC's and Vrouter, by clicking the start button, this will open the terminal.
+p. Start the PC's and Vrouter, by clicking the start button, this will open the terminal.
 .. image:: images/install_alpine_step11.png
   :alt: Step14
 
-  * Login to alpine with default username 'root' and password as ''
+q. Login to alpine with default username 'root' and password as ''
 .. image:: images/install_alpine_step11.png
   :alt: Step14
 
-  * Type 'setup-alpine' and enter the interactive setup
+r. Type 'setup-alpine' and enter the interactive setup
 .. image:: images/install_alpine_step12.png
   :alt: Step15
 
-   * The setup-alpine script offers the following configuration options:
-      * Keyboard Layout : 'us'
+s. The setup-alpine script offers the following configuration options:
+* Keyboard Layout : 'us'
 .. image:: images/install_alpine_step13.png
   :alt: Step16
-      * Keyboard Variant : 'us'
+* Keyboard Variant : 'us'
 .. image:: images/install_alpine_step14.png
   :alt: Step17
-      * Hostname: 'PC01' or 'PC02' or 'PC03' or 'vrouter'
+* Hostname: 'PC01' or 'PC02' or 'PC03' or 'vrouter'
 .. image:: images/install_alpine_step14.png
   :alt: Step17
-      * Network: 'none'
+* Network: 'none'
 .. image:: images/install_alpine_step15.png
   :alt: Step18
-      * DNS Servers:'8.8.8.8'
+* DNS Servers:'8.8.8.8'
 .. image:: images/install_alpine_step16.png
   :alt: Step18
-      * Root password: 'set root password of your choice'
+* Root password: 'set root password of your choice'
 .. image:: images/install_alpine_step17.png
   :alt: Step19
-      * Timezone: 'Asia/Singapore'
+* Timezone: 'Asia/Singapore'
 .. image:: images/install_alpine_step18.png
   :alt: Step20
-      * HTTP/FTP Proxy (Proxy server to use for accessing the web/ftp. Use "none" for direct connections to websites and FTP servers.)
-      * Mirror (From where to download packages. Choose the organization you trust giving your usage patterns to.)
-      * Setup a user (Setting up a regular user account)
-      * SSH (Secure SHell remote access server. "OpenSSH" is part of the default install image. Use "none" to disable remote login, e.g. on laptops.)
-      * Disk Mode (Select between diskless (disk="none"), "data" or "sys", as described above.)
+* HTTP/FTP Proxy:'none'
+.. image:: images/install_alpine_step19.png
+  :alt: Step21
+* * Mirror:'skip'
+.. image:: images/install_alpine_step20.png
+  :alt: Step22
+* Setup a user:'no'
+.. image:: images/install_alpine_step21.png
+  :alt: Step23
+* SSH:'OpenSSH'
+.. image:: images/install_alpine_step22.png
+  :alt: Step24
+* Disk Mode:'sys'
+.. image:: images/install_alpine_step23.png
+  :alt: Step25
   
 
 1. Enable virtual ethernet adapters 2, 3, and 4 on each PC and set them as host-only adapters

@@ -10,6 +10,9 @@ network diagram
 Network Devices
 The network consists of the following devices:
 
+.. image:: image/network-topology.jpeg
+
+
 PCs: These are the computers that connect to the network.
 Overlay Router: This is the router that routes traffic between the PCs and the internet.
 Overlay Router: This is a software router that runs on the Overlay router and creates the overlay network.

@@ -1,4 +1,4 @@
-Routing OverlMulti-tenant Network Router with Namespace-based IP Address Management
+Routing Multi-tenant Networks with Namespace-based IP Address Management
 ===================================================================================
 
 This document describes a network with a Multitenant router and an multitenancy network that allows PCs with the same IP address 
@@ -34,8 +34,8 @@ NameSpaces and Virtual Ethernet Adapters
 ========================================
 Namespaces and virtual ethernet adapters are used to create the overlay network. Namespaces provide a way to isolate processes and resources on a Linux system. Virtual ethernet adapters provide a way to connect namespaces to each other.
 
-Lab Documentation: Virtual Router with Overlay Networks and DNAT
-================================================================
+Lab Documentation: Multi-tenant Router with duplicated Networks and DNAT
+========================================================================
 This document describes a network lab setup with three PCs (PC1, PC2, PC3), a virtual router (alpinelinux), and virtual networks using namespaces and veth interfaces. 
 The lab demonstrates routing, connectivity, and DNAT functionalities.
 

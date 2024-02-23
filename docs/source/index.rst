@@ -62,54 +62,56 @@ Lab Setup:
 4. Setting Up PCs on virtualbox:
    Install Alpine x86_64 on virtualbox as PC1, PC2, and PC3.
 
-a. clieck on the New button
+5. clieck on the New button
 
 .. image:: images/install_alpine_step1.png
   :alt: Step1 
 
-b. Enter the name for PC1, PC2, PC3 and Vrouter respectively for each time while repeating the steps
-c. Navigate the path the downloaded alpine image
-d. Choose Linux as its type, Linux 64-bit as its version
+6. Enter the name for PC1, PC2, PC3 and Vrouter respectively for each time while repeating the steps
+7. Navigate the path the downloaded alpine image
+8. Choose Linux as its type, Linux 64-bit as its version
 
 .. image:: images/install_alpine_step2.png
   :alt: Step2
 
-e. Click Next and leave it to default
+9. Click Next and leave it to default
 
 .. image:: images/install_alpine_step3.png
   :alt: Step3
 
-f. Click Next and leave it to default
+10. Click Next and leave it to default
 
 .. image:: images/install_alpine_step4.png
   :alt: Step4 
-g. Click on Finish button
+11. Click on Finish button
 
 .. image:: images/install_alpine_step4.png
   :alt: Step4 
-h. Note before starting the pc setup the network adapters accordingly by navigating to settings
-i. Click on setting button
+
+12. Note before starting the pc setup the network adapters accordingly by navigating to settings
+13. Click on setting button
 
 .. image:: images/install_alpine_step1.png
   :alt: Step6
-j. Navigate to the network tab on side bar
+14. Navigate to the network tab on side bar
 
 .. image:: images/install_alpine_step6.png
   :alt: Step6
-k. Set the network adapter for PC's accordingly
-l. For PC1
+15. Set the network adapter for PC's accordingly
+16. For PC1
 
 .. image:: images/install_alpine_step6.png
   :alt: Step7
-m. For PC2
+
+17. For PC2
 
 .. image:: images/install_alpine_step8.png
   :alt: Step8
-n. For PC1
+18. For PC1
 
 .. image:: images/install_alpine_step9.png
   :alt: Step9
-o. For Vrouter - Set the 4 virtual adapters as follows:
+19. For Vrouter - Set the 4 virtual adapters as follows:
 
 .. image:: images/install_alpine_step10.png
   :alt: Step10
@@ -123,27 +125,27 @@ o. For Vrouter - Set the 4 virtual adapters as follows:
 .. image:: images/install_alpine_step27.png
   :alt: Step13
 
-p. Start the PC's and Vrouter, by clicking the start button, this will open the terminal.
+20. Start the PC's and Vrouter, by clicking the start button, this will open the terminal.
 
 .. image:: images/install_alpine_step11.png
   :alt: Step14
 
-q. Login to alpine with default username 'root' and password as ''
+21. Login to alpine with default username 'root' and password as ''
 
 .. image:: images/install_alpine_step11.png
   :alt: Step14
 
-r. Type 'setup-alpine' and enter the interactive setup
+22. Type 'setup-alpine' and enter the interactive setup
 
 .. image:: images/install_alpine_step12.png
   :alt: Step15
 
-s. The setup-alpine script offers the following configuration options:
-* Keyboard Layout : 'us'
+23. The setup-alpine script offers the following configuration options:
+24. Keyboard Layout : 'us'
 
 .. image:: images/install_alpine_step13.png
   :alt: Step16
-* Keyboard Variant : 'us'
+25. Keyboard Variant : 'us'
 .. image:: images/install_alpine_step14.png
   :alt: Step17
 * Hostname: 'PC01' or 'PC02' or 'PC03' or 'vrouter'

@@ -187,6 +187,9 @@ Download the scripts from : https://github.com/Arunkumarsubbiahunique/network-se
 
     On pc1
     ------
+.. code-block:: bash
+
+   code
     vi /etc/nettop/network-setup.sh
     hit 'i' key to edit the file
     copy and paste the below
@@ -215,6 +218,9 @@ Download the scripts from : https://github.com/Arunkumarsubbiahunique/network-se
     On pc2
     ------
     vi /etc/nettop/network-setup.sh
+.. code-block:: bash
+
+   code
     hit 'i' key to edit the file
     copy and paste the below
 
@@ -242,6 +248,9 @@ Download the scripts from : https://github.com/Arunkumarsubbiahunique/network-se
     On pc3
     ------
     vi /etc/nettop/network-setup.sh
+.. code-block:: bash
+
+   code
     hit 'i' key to edit the file
     copy and paste the below
 
@@ -269,6 +278,9 @@ Download the scripts from : https://github.com/Arunkumarsubbiahunique/network-se
     On Vrouter
     -----------
     vi /etc/nettop/network-setup.sh
+.. code-block:: bash
+
+   code
     hit 'i' key to edit the file
     copy and paste the below
 

@@ -392,8 +392,7 @@ code ...
 
 code ...
 
-Adding additonal namespaces and duplicated Networks and DNAT
-============================================================
+
 
 
 

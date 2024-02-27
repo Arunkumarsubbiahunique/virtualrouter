@@ -101,29 +101,29 @@ Lab Setup:
 15. Set the network adapter for PC's accordingly
 16. For PC1
 
-.. image:: images/install_alpine_step6.png
+.. image:: images/pc01_eth0.png
   :alt: Step7
 
 17. For PC2
 
-.. image:: images/install_alpine_step8.png
+.. image:: images/pc02_eth0.png
   :alt: Step8
 18. For PC3
 
-.. image:: images/alpine_network_pc03.png
+.. image:: images/pc03_eth0.png
   :alt: Step9
 19. For Vrouter - Set the 4 virtual adapters as follows:
 
 .. image:: images/install_alpine_step10.png
   :alt: Step10
 
-.. image:: images/install_alpine_step25.png
+.. image:: images/vrouter_eth1.png
   :alt: Step11
 
-.. image:: images/install_alpine_step26.png
+.. image:: images/vrouter_eth2.png
   :alt: Step12
 
-.. image:: images/install_alpine_step27.png
+.. image:: images/vrouter_eth3.png
   :alt: Step13
 
 20. Start the PC's and Vrouter, by clicking the start button, this will open the terminal.
@@ -197,6 +197,7 @@ Download the scripts from : https://github.com/Arunkumarsubbiahunique/network-se
     copy and paste the below
 
     ip addr add 10.0.0.10/24 dev eth0
+    ip link set up eth0
     ip route add default via 10.0.0.1 dev eth0
 
     hit 'esc' key and type ':wq' to save
@@ -230,6 +231,7 @@ code ...
     copy and paste the below
 
     ip addr add 192.168.1.100/24 dev eth0
+    ip link set up eth0
     ip route add default via 192.168.1.1 dev eth0
 
     hit 'esc' key and type ':wq' to save
@@ -264,6 +266,7 @@ code ...
     copy and paste the below
 
     ip addr add 192.168.1.100/24 dev eth0
+    ip link set up eth0
     ip route add default via 192.168.1.1 dev eth0
 
     hit 'esc' key and type ':wq' to save
@@ -293,7 +296,8 @@ code ...
 .. code-block:: bash
   :linenos:
 
-		apk add iproute2
+    apk add iproute2
+    apk add iptables
     vi /etc/nettop/network-setup.sh
     hit 'i' key to edit the file
     copy and paste the below

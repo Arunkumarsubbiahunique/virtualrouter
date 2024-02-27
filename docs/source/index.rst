@@ -110,7 +110,7 @@ Lab Setup:
   :alt: Step8
 18. For PC3
 
-.. image:: images/install_alpine_step9.png
+.. image:: images/alpine_network_pc03.png
   :alt: Step9
 19. For Vrouter - Set the 4 virtual adapters as follows:
 
